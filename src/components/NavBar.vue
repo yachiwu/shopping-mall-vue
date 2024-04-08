@@ -1,7 +1,10 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-primary" data-bs-theme="dark">
     <div class="container-fluid">
-        <router-link to="/" class="navbar-brand">Shopping Mall</router-link>
+        <router-link to="/" class="navbar-brand">
+            <img src="../assets/icons/mall.png" alt="" class="logo">
+            <span class="ml-2"> Shopping Mall</span>
+        </router-link>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -23,3 +26,10 @@
     </nav>
     <router-view></router-view>  
 </template>
+<style scoped>
+    .logo{
+        width: 50px;
+        height: 50px;
+        margin-right: 5px;
+    }
+</style>
