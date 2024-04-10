@@ -13,6 +13,14 @@
 <script setup>
     import { ref } from 'vue'
     import ProductCard from "../components/ProductCard.vue"
+    import { useStore } from 'vuex';
+    import { computed, onMounted } from "vue";
+    const store = useStore();
+    const products = computed(()=> store.state.product.list);
+    onMounted(() => {
+      store.dispatch("loadAllProducts");
+    });
+    console.log(products)
     
     const productList = ref([
       { ProductId: 1, ProductName: "Donna 體控&低敏犬糧15KG",category:"Dogs",
