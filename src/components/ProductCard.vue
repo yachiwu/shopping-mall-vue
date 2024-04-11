@@ -1,5 +1,5 @@
 <template>
-    <div class="col-md-3 mb-4">
+    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-12 mb-4">
         <div class="card h-100">
             <div class="card-body">
                 <h4 class="card-title">{{product.ProductName}}</h4>
@@ -8,10 +8,10 @@
                 <span class="badge bg-primary mb-3">{{product.category}}</span>
                 <h4 class="card-text">NT $ {{product.price}}</h4>
                 <div class="button-container">
-                    <router-link :to="{ name: 'products.edit', params: { id: product.ProductId } }" class="btn btn-outline-primary me-2" role="button">
+                    <router-link :to="{ name: 'products.edit', params: { id: product.productId } }" class="btn btn-outline-primary me-2 mb-2 mb-md-0" role="button">
                         Edit
                     </router-link>
-                    <button type="button" class="btn btn btn-outline-warning me-2">Delete</button>
+                    <button type="button" class="btn btn-outline-warning me-2 mb-2 mb-md-0">Delete</button>
                     <ProductModalDetail/>
                 </div>
             </div>
@@ -42,6 +42,7 @@
     .button-container {
         display: flex;
         justify-content: center;
+        
     }
     .btn > a {
         text-decoration: none

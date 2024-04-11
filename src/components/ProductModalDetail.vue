@@ -1,6 +1,6 @@
 <template>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-outline-info me-2" data-bs-toggle="modal" data-bs-target="#targetModal">
+    <button type="button" class="btn btn-outline-info me-2 mb-2 mb-md-0" data-bs-toggle="modal" data-bs-target="#targetModal">
         More
     </button>
     <!-- Modal -->
