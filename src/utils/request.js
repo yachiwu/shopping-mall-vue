@@ -11,7 +11,6 @@ export async function request(url, { method = "GET", body, headers } = {}) {
             },
             data: body ? JSON.stringify(body) : undefined
         });
-
         return response.data;
     } catch (error) {
         throw error;

@@ -19,7 +19,7 @@
     onMounted(() => {
       store.dispatch("loadAllProducts");
     });
-    console.log(products)
+    // console.log(products)
     
 </script>
 <style scoped>

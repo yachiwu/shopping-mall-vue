@@ -1,5 +1,5 @@
 import {
-    listProducts
+    listProducts,createProduct
 } from "../../apis/product";
 
 export const product = {
@@ -14,6 +14,10 @@ export const product = {
         },
     },
     actions: {
+        async newProduct({dispatch}, data) {
+            await createProduct(data);
+            dispatch("loadAllProducts");
+          }, 
         async loadAllProducts({ commit }) {
             const products = await listProducts();
             commit("initializeProducts", products);
