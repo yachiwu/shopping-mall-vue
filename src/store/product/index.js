@@ -5,13 +5,17 @@ import {
 export const product = {
     state(){
         return {
-           list:[]     
+           list:[],
+           currentId : null
         };
     },
     mutations: {
         initializeProducts(state,products){
-            state.list = products
+            state.list = products;
         },
+        setCurrentId(state,id){
+            state.currentId = id;
+        }
     },
     actions: {
         async newProduct({dispatch}, data) {
@@ -22,5 +26,13 @@ export const product = {
             const products = await listProducts();
             commit("initializeProducts", products);
           },
+        async showProductDetails({commit},id){
+            commit("setCurrentId",id);
+        }  
     },
+    getters:{
+        productDetails(state){
+            return state.list.find((product)=> product.productId === state.currentId );
+        }
+    }
 };
